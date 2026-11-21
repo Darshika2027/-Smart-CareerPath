@@ -22,3 +22,11 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+.env
+test-results/
+playwright-report/
+playwright/.cache/
+supabase/.temp/
+*.backup
+supabase_schema_check.sql
