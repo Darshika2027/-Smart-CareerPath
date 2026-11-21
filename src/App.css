@@ -319,8 +319,8 @@ input {
   padding: 16px 24px;
   overflow: hidden;
   background:
-    radial-gradient(circle at 95% 8%, #c9e2ff 0, transparent 25%),
-    linear-gradient(135deg, #eaf2ff 0%, #f7f9ff 100%);
+    linear-gradient(rgba(235, 245, 255, 0.48), rgba(235, 245, 255, 0.48)),
+    url("/registration-bg.jpg") center / cover no-repeat;
 }
 
 .form-decoration {
@@ -836,3 +836,36 @@ input:focus-visible {
     animation-duration: .01ms !important;
   }
 }
+
+
+/* FINAL STUDENT IMAGE SIZE AND POSITION */
+@media (min-width: 761px) {
+  .student-illustration {
+    height: clamp(180px, 30vh, 280px);
+    min-height: 160px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .student-pair-image {
+    width: 118%;
+    height: 100%;
+    max-width: 560px;
+    object-fit: contain;
+    object-position: center bottom;
+    transform: scale(1.08);
+    filter: drop-shadow(0 14px 18px rgba(0,20,50,.25));
+  }
+}
+
+/* IMAGE SIZE FOR SHORT DESKTOP SCREENS */
+@media (max-height: 780px) and (min-width: 761px) {
+  .student-illustration {
+    height: clamp(145px, 23vh, 195px);
+    min-height: 135px;
+  }
+}
+
