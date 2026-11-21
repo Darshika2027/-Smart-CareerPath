@@ -1,4 +1,4 @@
-﻿
+
 /* =========================================
    SMART CAREERPATH - REGISTRATION PAGE
    Modern Compact Glass UI
@@ -866,6 +866,87 @@ input:focus-visible {
   .student-illustration {
     height: clamp(145px, 23vh, 195px);
     min-height: 135px;
+  }
+}
+
+/* SMART CAREERPATH - STUDENT BACKGROUND */
+
+@media (min-width: 761px) {
+  .welcome-panel {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+
+    background:
+      linear-gradient(
+        90deg,
+        rgba(3, 35, 77, 0.12) 0%,
+        rgba(3, 35, 77, 0.30) 42%,
+        rgba(3, 35, 77, 0.88) 100%
+      ),
+      linear-gradient(
+        180deg,
+        rgba(3, 35, 77, 0.08) 0%,
+        rgba(3, 35, 77, 0.15) 65%,
+        #07366d 100%
+      ),
+      url("/student-pair.png");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .welcome-panel::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background: radial-gradient(
+      ellipse at 22% 48%,
+      rgba(65, 185, 255, 0.24) 0%,
+      rgba(65, 185, 255, 0.08) 30%,
+      transparent 65%
+    );
+  }
+
+  .welcome-panel::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background: linear-gradient(
+      90deg,
+      transparent 0%,
+      transparent 30%,
+      rgba(5, 48, 94, 0.48) 65%,
+      #07366d 100%
+    );
+  }
+
+  .brand,
+  .welcome-content,
+  .welcome-footer {
+    position: relative;
+    z-index: 2;
+  }
+
+  .student-illustration {
+    display: none;
+  }
+}
+
+@media (max-width: 760px) {
+  .welcome-panel {
+    background:
+      linear-gradient(
+        135deg,
+        rgba(3, 35, 77, 0.94),
+        rgba(7, 86, 155, 0.94)
+      ),
+      url("/student-pair.png") center / cover no-repeat;
   }
 }
 
