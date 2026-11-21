@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from "react";
+﻿import React, { useEffect, useMemo, useState } from "react";
 import {
   ArrowRight,
   Bell,
@@ -156,9 +156,9 @@ const MODAL_TEXT = {
   "Student Data Protection": {
     lead: "Actual student privacy must be enforced by Supabase Row Level Security (RLS).",
     items: [
-      "Student A must not read or edit Student B’s profile.",
+      "Student A must not read or edit Student Bâ€™s profile.",
       "Apply ownership policies to student skills and career goals.",
-      "Test database requests directly—not just hidden UI buttons.",
+      "Test database requests directlyâ€”not just hidden UI buttons.",
       "Keep historical roadmap progress private to its owner.",
     ],
   },
@@ -172,14 +172,14 @@ const MODAL_TEXT = {
     ],
   },
   "Security Verification": {
-    lead: "The results shown in the visual preview are placeholders—not executed security tests.",
+    lead: "The results shown in the visual preview are placeholdersâ€”not executed security tests.",
     items: VERIFICATIONS.map((test) => `${test.id}: ${test.detail}`),
   },
   "Manage Access Policies": {
     lead: "Access policies cannot be changed safely from this student-facing demo page.",
     items: [
       "Implement and review policies in Supabase using authorized tools.",
-      "Keep database changes in reviewed SQL migrations or your team’s approved process.",
+      "Keep database changes in reviewed SQL migrations or your teamâ€™s approved process.",
       "Test with at least two different student accounts.",
       "Never place a service-role secret in React frontend code.",
     ],
@@ -188,7 +188,7 @@ const MODAL_TEXT = {
     lead: "Connect real test evidence before displaying a Passed result in production.",
     items: VERIFICATIONS.map(
       (test) =>
-        `${test.id} — ${test.label}: Not executed in this UI-only demo.`,
+        `${test.id} â€” ${test.label}: Not executed in this UI-only demo.`,
     ),
   },
   "Review Access Logs": {
@@ -270,7 +270,7 @@ function StatCard({ stat }) {
         ) : (
           <div className="stat-value-row">
             <strong>{stat.value}</strong>
-            {stat.note && <span className="stat-rise">↑ {stat.note}</span>}
+            {stat.note && <span className="stat-rise">â†‘ {stat.note}</span>}
           </div>
         )}
         {stat.fill != null && (
@@ -296,7 +296,7 @@ function Brand() {
           <br />
           CareerPath
         </strong>
-        <span>Learn · Improve · Grow</span>
+        <span>Learn Â· Improve Â· Grow</span>
       </div>
     </div>
   );
@@ -338,7 +338,7 @@ function Modal({ modal, onClose }) {
       >
         <div className="modal-top">
           <div>
-            <span className="eyebrow">SMART CAREERPATH · UI PREVIEW</span>
+            <span className="eyebrow">SMART CAREERPATH Â· UI PREVIEW</span>
             <h2 id="modal-heading">{modal}</h2>
           </div>
           <button
@@ -360,7 +360,7 @@ function Modal({ modal, onClose }) {
         </ul>
         <div className="modal-foot">
           <span>
-            <ShieldAlert size={15} aria-hidden="true" /> Sample UI only — no
+            <ShieldAlert size={15} aria-hidden="true" /> Sample UI only â€” no
             live data
           </span>
           <button type="button" className="primary-small" onClick={onClose}>
@@ -416,7 +416,7 @@ function App() {
         aria-label="Main navigation"
       >
         <Brand />
-        <nav className="main-navigation">
+        <nav className="main-navigation" aria-label="Main navigation">
           {NAVIGATION.map(({ label, icon: Icon }) => (
             <button
               type="button"
@@ -499,7 +499,7 @@ function App() {
                   ))
                 ) : (
                   <div className="no-results">
-                    No security panels match “{searchText}”. Other pages are not
+                    No security panels match â€œ{searchText}â€. Other pages are not
                     connected yet.
                   </div>
                 )}
@@ -563,7 +563,7 @@ function App() {
               {profileOpen && (
                 <div className="header-popover profile-popover">
                   <strong>Example account</strong>
-                  <p>Preview user — not connected to Supabase Auth.</p>
+                  <p>Preview user â€” not connected to Supabase Auth.</p>
                   <button
                     type="button"
                     onClick={() => openInfo("My Profile & Skills")}
@@ -725,7 +725,7 @@ function App() {
             </section>
           </div>
           <footer className="dashboard-footer">
-            Smart CareerPath · SCP-25 Security &amp; Access UI Concept ·
+            Smart CareerPath Â· SCP-25 Security &amp; Access UI Concept Â·
             Frontend demonstration only
           </footer>
         </main>
@@ -736,3 +736,4 @@ function App() {
 }
 
 export default App;
+

@@ -3,3 +3,5 @@ dist/
 .env
 .env.*
 *.backup*
+test-results/
+playwright-report/
